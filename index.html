@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Blank App Designer Cordova Web App Project Template</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+        <style>
+                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/login.js"></script>
+
+        
+        <script src="js/app.js"></script>
+        <!-- for your event code, see README and file comments for details -->
+        <script src="js/init-app.js"></script>
+        <!-- for your init code, see README and file comments for details -->
+        <script src="xdk/init-dev.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    </head>
+
+    <body>
+        <div id="data">
+<!--
+    <nav class="navbar navbar-default">
+        <div class="navbar-header">
+          <div class="logo">
+          <img src="../images/data.png" alt="mytruck">
+          <span>Vetrack</span>
+          </div>
+        </div>
+    </nav>
+-->
+    <div class="container">
+            <div id="response"></div>
+    <ul class="tab-group">
+    <li class="tab active" id="sign_up_click"><a>Sign Up</a></li>
+    <li class="tab" id="log_in_click"><a>Log In</a></li>
+    </ul>
+    <div id="signup">
+      <form id="signup_form">
+        <div class="field-wrap">
+          <input type="text/css" class="form-control" id="name" placeholder="Name" required autofocus>
+          <br>
+        </div>
+        <div class="field-wrap">
+          <div class="input-group">
+            <span class="input-group-addon">+91</span>
+            <input  type="text"  class="form-control" id="signup_phone_no" name="mobile_number" placeholder="Mobile number" maxlength="10" required >
+            <br>
+          </div>
+        </div> 
+        <button type="submit"  class="btn btn-primary pull-right form-control" >Signup</button>
+      </form>
+    </div>
+    <div id="login">
+    <form id="login_form">
+     <div class="field-wrap">
+          <div class="input-group">
+            <span class="input-group-addon">+91</span>
+            <input  type="text"  class="form-control" id="phone_no"  name="phone_no" placeholder="Mobile number" maxlength="10" required >
+            <br>
+          </div>
+        </div>
+    <button type="submit" class="btn btn-primary pull-right form-control" >login</button>
+    </form>
+    </div>
+    </div>
+    <div id="alert-overlay"></div>
+	<div id="newalert">
+		<h2 id="alert-message"></h2>
+        <hr>
+        <input type="text" class="form-control" id="otp"  name="otp" placeholder="OTP" >
+        <hr>
+		<button class="alert-dismiss">Submit</button>
+         <div id="response_dialog"></div>
+	</div>
+    </div>
+    </body>
+
+</html>

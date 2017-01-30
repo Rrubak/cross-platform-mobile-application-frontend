@@ -1,0 +1,62 @@
+*{margin:0;padding:0;}
+
+body{
+  background:#fff;
+	font-family:Verdana,sans-serif;
+}
+
+#tabs{
+	width:90%;
+  margin:0 auto;
+  margin-top:2%;
+  margin-bottom:2%;
+  border-radius:3px;
+}
+
+input[type="radio"]{
+	display:none;
+}
+
+label{
+  background:#e0e5ea;
+	display:inline-block;
+	margin-right:2px;
+  border-radius:3px;
+	padding:14px 20px;
+  font-family:Arial;  
+  font-size:95%;
+  font-weight:700;
+  color:#777;
+	cursor:pointer;
+  text-shadow:1px 1px #fff;
+  transition:background .3s;
+  -webkit-transition:background .3s;
+}
+
+label:hover{
+  background:#e0e5ea;
+  color:#707070;
+}
+
+.tab{
+	min-height:200px;
+	background:#e0e5ea;
+	display:none;
+	padding:12px;
+  color:#444;
+  text-shadow:1px 1px #fff;
+}
+
+#toggle-tab1:checked ~ label[for="toggle-tab1"],#toggle-tab2:checked ~ label[for="toggle-tab2"],#toggle-tab3:checked ~ label[for="toggle-tab3"],#toggle-tab4:checked ~ label[for="toggle-tab4"]{
+  background:#e0e5ea;
+  margin-bottom:0;
+  border-bottom-left-radius:0;
+  border-bottom-right-radius:0;
+  padding-bottom:18px;
+  color:#606060;
+  cursor:default;
+}
+
+#toggle-tab1:checked ~ #tab1,#toggle-tab2:checked ~ #tab2,#toggle-tab3:checked ~ #tab3,#toggle-tab4:checked ~ #tab4{
+  display:block;
+}
