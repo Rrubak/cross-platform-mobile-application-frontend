@@ -7,11 +7,33 @@
      <script src="js/jquery-1.js"></script>
     <script src="js/jquery-mobile.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <style>
+        html, body {
+            overflow: auto !important;
+        }
+    </style>
+        <script>
+            document.addEventListener("intel.xdk.device.ready", onDeviceReady, false);               
+            function onDeviceReady(){
+                console
+                // set orientation
+            //    intel.xdk.device.setRotateOrientation('landscape');
+                intel.xdk.device.setRotateOrientation('portrait');
+            //    intel.xdk.device.setRotateOrientation('any');
 
+                intel.xdk.device.hideSplashScreen();   
+            }        
+    </script>
 </head>
-
 <body>
-
+        <nav class="navbar navbar-inverse" style="position:absolute; width:100%;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Vetrack</a>
+    <!--                <button class="btn btn-danger navbar-btn pull-right" id="logout">Logout</button>-->
+                </div>
+            </div>
+        </nav>
     <div id="wrapper" >
 
         <!-- Sidebar -->
@@ -32,19 +54,17 @@
         </div>
         <div id="sidebar-wrapper" style="margin-top: 160px;">
                 <ul class="sidebar-nav" id="sidebar_content">
+                    <li id="view_vehicles"><a>View vehicle</a></li><hr>
+                    <li id="Settings"><a>Settings</a></li><hr>
+                    <li id="logout"><a>Logout</a></li><hr>
+                    <li  id="terms"><a>Terms & Conditions</a></li><hr>
+                    <li><a>Contact Us</a></li><hr>
                 </ul>
         </div>
         <!-- /#sidebar-wrapper -->
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Vetrack</a>
-                <button class="btn btn-danger navbar-btn pull-right" id="logout">Logout</button>
-            </div>
-        </div>
-    </nav>
+
     </div><br><br>
-         <div id="page-content-wrapper">
+         <div id="page-content-wrapper" style="width:100%;height:100%;display: block;">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12" id="content-main">
@@ -53,10 +73,9 @@
                     </div>
                 </div>
             </div>
-             
-         <div id="response">
-             
-             </div>
+            <div id="response">
+                
+            </div>
         </div>
     <!-- /#wrapper -->
  <script>
