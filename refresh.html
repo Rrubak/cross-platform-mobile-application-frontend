@@ -3,9 +3,33 @@
      <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/jquery.min.js"></script>
+        <script src="js/jquery-1.js"></script>
     <script type="text/javascript" src="js/refresh.js"></script>
+    <style>
+.loader {
+  margin-top: 50%;
+  margin-left: 35%;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid black;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
 </head>
 <body>
-    <div class="alert alert-success" style="margin-top:30%;"><h3>Loading!</h3><p>please wait...</p></div>
+    <div class="loader"></div>
 </body>
 </html>
